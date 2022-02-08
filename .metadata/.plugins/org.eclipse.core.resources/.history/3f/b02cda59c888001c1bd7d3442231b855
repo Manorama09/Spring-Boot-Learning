@@ -24,6 +24,11 @@ public class StudentController {
 	
 	@Autowired
 	StudentRepo repo;
+
+//	@RequestMapping("/")
+//	public String home(){
+//		return("home.jsp");
+//	}
 	
 	// POST - Adding a student record
 	@PostMapping(path="/students", consumes = {"application/json"})
@@ -61,11 +66,6 @@ public class StudentController {
 		return student;
 	}
 }
-//@RequestMapping("/")
-//public String home(){
-//	return("home.jsp");
-//}
-
 //Using Model and View to Get student details
 //@RequestMapping("/getStudent")
 //public ModelAndView getStudent(@RequestParam int sid) {
