@@ -1,0 +1,18 @@
+package com.example.demo.topic;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+@RestController
+public class TopicController {
+	
+	@Autowired
+	private TopicService topicService;
+	
+	@RequestMapping("/topics")
+	public List<Topic> getAllTopics(){
+		return topicService.getAllTopics();
+	}
+
+}

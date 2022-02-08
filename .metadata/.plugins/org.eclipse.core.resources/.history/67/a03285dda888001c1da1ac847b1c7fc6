@@ -1,0 +1,10 @@
+package com.example.demo.topic;
+
+public interface TopicRepo {
+	
+	//getAllTopics	
+	//getTopic(String id)	
+	//updateTopic(Topic t)	
+	//deleteTopic(String id)
+	
+}

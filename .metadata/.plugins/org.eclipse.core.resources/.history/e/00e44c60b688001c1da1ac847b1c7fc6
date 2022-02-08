@@ -1,0 +1,13 @@
+package com.example.demo.course;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+// CrudRepository <Entity, Id>
+public interface CourseRepo extends CrudRepository<Course, String>{
+	
+	public List<Course> getCoursesByName(String name);
+	public List<Course> getCoursesByTopic(String topicId);
+	
+}

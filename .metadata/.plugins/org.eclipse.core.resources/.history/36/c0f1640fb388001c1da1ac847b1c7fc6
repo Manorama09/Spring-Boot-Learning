@@ -1,0 +1,48 @@
+package com.example.demo.course;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class CourseController {
+	
+	@Autowired
+	private CourseService CourseService;
+	
+	// GET - All Courses
+	@RequestMapping("/Courses")
+	public List<Course> getAllCourses(){
+		return CourseService.getAllCourses();
+	}
+	
+	// GET - A particular Course's details
+	@RequestMapping("/Courses/{id}")
+	public Optional<Course> getCourse(@PathVariable String id) {
+		return CourseService.getCourse(id);
+	}
+	
+	// POST - Add a new Course
+	@RequestMapping(value="/Courses", method=RequestMethod.POST)
+	public void addCourse(@RequestBody Course Course) {
+		CourseService.addCourse(Course);
+	}
+	
+	// PUT - Update an existing Course - given id
+	@RequestMapping(value="/Courses/{id}", method=RequestMethod.PUT)
+	public void updateCourse(@RequestBody Course Course, @PathVariable String id) {
+		CourseService.updateCourse(Course,id);
+	}
+	
+	// DELETE - Remove an existing Course - given id
+	@RequestMapping(value="/Courses/{id}", method=RequestMethod.DELETE)
+	public void deleteCourse(@PathVariable String id) {
+		CourseService.deleteCourse(id);
+	} 
+}

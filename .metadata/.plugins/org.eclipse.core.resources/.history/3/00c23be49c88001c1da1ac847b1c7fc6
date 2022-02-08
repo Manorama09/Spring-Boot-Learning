@@ -1,0 +1,9 @@
+package com.example.demo.topic;
+
+@RestController
+public class TopicController {
+	
+	@Autowired
+	private TopicService topicService;
+
+}

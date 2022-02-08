@@ -1,0 +1,14 @@
+package com.example.demo.topic;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+//A business service - singleton
+@Service
+public class TopicService {
+
+	List<Topic> topics = Arrays.asList(
+			new Topic("spring", "Spring Framework", "Spring Framework Description"));
+}

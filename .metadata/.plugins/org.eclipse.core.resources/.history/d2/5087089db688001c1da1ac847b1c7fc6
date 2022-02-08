@@ -1,0 +1,15 @@
+package com.example.demo.course;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+// CrudRepository <Entity, Id>
+public interface CourseRepo extends CrudRepository<Course, String>{
+	
+	// all courses that have a specific name - findBy{Property}
+	public List<Course> findByName(String name);
+	
+	public List<Course> getCoursesByTopic(String topicId);
+	
+}

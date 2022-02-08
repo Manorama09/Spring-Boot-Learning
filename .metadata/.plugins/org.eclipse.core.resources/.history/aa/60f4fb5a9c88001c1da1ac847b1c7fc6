@@ -1,0 +1,10 @@
+package com.example.demo.topic;
+
+import org.springframework.stereotype.Service;
+
+//A business service - singleton
+@Service
+public class TopicService {
+
+	
+}

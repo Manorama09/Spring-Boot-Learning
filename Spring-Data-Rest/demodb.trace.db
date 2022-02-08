@@ -1,0 +1,3 @@
+2022-02-07 19:19:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STUDENT" not found; SQL statement:
+select student0_.id as id1_0_, student0_.name as name2_0_, student0_.tech as tech3_0_ from student student0_ limit ? [42102-200]
